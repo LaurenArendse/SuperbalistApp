@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SuperbalistApp.ProfilePage"
+            IconImageSource="profileIcon.png">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <AbsoluteLayout BackgroundColor="White"
+                            Padding="0"
+                            VerticalOptions="Start"
+                            Margin="0" HeightRequest="205">
+                <Image Source="profilePicture.jpg"
+                           HorizontalOptions="Start"
+                           Margin="0"
+                           VerticalOptions="Start"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                            <Frame OutlineColor="Black"
+                                   BackgroundColor="Black"
+                                   Margin="160"
+                                   CornerRadius="90" HeightRequest="20">
+                                   <!--HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"-->
+                                  
+                                   <!--AbsoluteLayout.LayoutFlags="PositionProportional"-->
+                                   <!--AbsoluteLayout.LayoutBounds="50,50,50,50"-->
+                                   
+                                   <Label Text="LA"
+                                          TextColor="White"
+                                          FontSize="Medium"
+                                          FontAttributes="Bold"/>
+                
+
+                            </Frame>
+
+
+            </AbsoluteLayout>
+
+            <Label Text="Hello, Lauren Arendse"
+                           HorizontalTextAlignment="Center"
+                           Margin="15,25"
+                           TextColor="Black"
+                           FontAttributes="Bold" VerticalOptions="Start" />
+
+            <ListView Margin="0,0" ItemsSource="{Binding Options}">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Icon}"
+                                           HorizontalOptions="Start"
+                                           Margin="15"
+                                           VerticalOptions="Start" />
+
+                                <Label Text="{Binding OptionItem}"
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           FontSize="Small" 
+                                           VerticalOptions="CenterAndExpand"/>
+                                
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="App Version: 3.14.1 (Build 1649855577)"
+                       TextColor="Gray"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="Small" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+    
+</ContentPage>
