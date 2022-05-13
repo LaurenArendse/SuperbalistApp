@@ -16,12 +16,13 @@ namespace SuperbalistApp
 
         public string Color { get; set; }
 
-        //public string Image { get; set; }
+        public string Image { get; set; }
 
-        public Category(string name, string color)
+        public Category(string name, string color, string image)
         {
             Name = name;
             Color = color;
+            Image= image;
             
         }
 
@@ -40,23 +41,21 @@ namespace SuperbalistApp
 
             Categories = new ObservableCollection<Category>
             {
-                new Category("OFFERS", "LightGreen"),
-                new Category("brands", "lightgray"),
-                new Category("new in", "lightgray"),
-                new Category("accessories", "lightgray"),
-                new Category("beauty", "lightgray"),
-                new Category("bottoms", "lightgray"),
-                new Category("dresses", "lightgray"),
-                new Category("jackets & coats", "lightgray"),
-                new Category("lingerie & sleepwear", "lightgray"),
-                new Category("maternity", "lightgray"),
-                new Category("petite", "lightgray"),
-                new Category("plus size", "lightgray"),
-                new Category("shoes", "lightgray"),
-                new Category("sport", "lightgray"),
-                new Category("swimwear", "lightgray"),
-                new Category("tops", "lightgray"),
-                new Category("sale", "lightgray"),
+                new Category("OFFERS", "LightGreen",""),
+                new Category("BRANDS", "lightgray",""),
+                new Category("NEW IN", "lightgray",""),
+                new Category("ACCESSORIES", "lightgray","accessories.jpg"),
+                new Category("BEAUTY", "lightgray","beauty.jpg"),
+                new Category("BOTTOMS", "lightgray","bottoms.jpg"),
+                new Category("DRESSES", "lightgray","dress.jpg"),
+                new Category("JACKETS & COATS", "lightgray","jacketscoats.jpg"),
+                new Category("LINGERIE & SLEEPWEAR", "lightgray","lingeriesleepwear.jpg"),         
+                new Category("PLUS SIZE", "lightgray","plussize.jpg"),
+                new Category("SHOES", "lightgray","shoes.jpg"),
+                new Category("SPORT", "lightgray","sport.jpg"),
+                new Category("SWIMWEAR", "lightgray","swimwear.jpg"),
+                new Category("TOPS", "lightgray","tops.jpg"),
+                new Category("SALE", "lightgray",""),
             };
 
             BindingContext = this;
